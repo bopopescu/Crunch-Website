@@ -1,0 +1,17 @@
+
+{% block content %}
+<html>
+    <h1>Welcome! Please Log in!</h1>
+    <body>
+        <h2>Please submit the following information to log in to your account.</h2>
+        <form action = '/login/login_page'  method="POST">
+            Email: <input type="text" name="email"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit" value="Login">
+        </form>
+        {% if error %}
+            <p class=error><strong>Error: </strong> {{ error }}
+        {% endif %}
+    </body>
+</html>
+{%  endblock %}
