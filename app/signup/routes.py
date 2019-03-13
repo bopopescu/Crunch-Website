@@ -50,6 +50,7 @@ def signup_page():
             info = {
                 "status": "username taken"
             }
+        #return json.dumps(info)
 
     return render_template('signup.html', error=error)
 

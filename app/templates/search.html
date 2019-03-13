@@ -1,0 +1,13 @@
+{% block content %}
+<html>
+    <h1>Welcome! Search for movies here!</h1>
+    <body>
+        <form action = '/search/search_page' method="POST">
+            Search: <input type="text" name="search_criteria"> <input type="submit" value="Search">
+        </form>
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </body>
+</html>
+{% endblock %}

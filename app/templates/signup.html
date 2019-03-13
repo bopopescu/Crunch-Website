@@ -1,0 +1,18 @@
+{% block content %}
+<html>
+    <h1>Welcome! Sign up to make an account here!</h1>
+    <body>
+        <h3>Please submit the following information to create your account.</h3>
+        <form action = '/signup/signup_page' method="POST">
+            Full Name: <input type="text" name="fullname"><br>
+            Email: <input type="text" name="email"><br>
+            User Name: <input type="text" name="username"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit" value="Signup">
+        </form>
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </body>
+</html>
+{% endblock %}

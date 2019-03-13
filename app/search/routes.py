@@ -4,6 +4,7 @@ from flask import render_template, redirect, url_for
 from flask import request
 from app.api import movie_search
 
+
 @search_bp.route('/search_page', methods=["GET", "POST"])
 def search_page():
     error = None
@@ -24,13 +25,13 @@ def search_page():
             return json.dumps(state)
         else:
             #return data
-            #return redirect("search_results.html", data=data)
 
-            loaded_data = json.loads(data)
-            return redirect(url_for("search.search_results_page", data=loaded_data))
+
+            return redirect(url_for("search.search_results_page", data=data))
     return render_template("search.html", error=error)
 
 @search_bp.route('/search_results_page', methods=["GET", "POST"])
 def search_results_page():
-    data = request.args.get('data')
-    return render_template("search_results.html", data=data)
+    data = request.values.get('data')
+    loaded_data = json.loads(data)
+    return render_template("search_results.html", data=loaded_data)
