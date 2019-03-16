@@ -14,3 +14,6 @@ app.register_blueprint(search_bp)
 
 from app.signup import signup_bp as signup_bp
 app.register_blueprint(signup_bp)
+
+from app.newsletter import newsletter_bp as newsletter_bp
+app.register_blueprint(newsletter_bp)
