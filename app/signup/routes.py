@@ -36,7 +36,7 @@ def signup_page():
 
         if(check == 'clear'):
             users.create_user(json_info)
-            flash("Account successfully created!")
+            error = "Account successfully created!"
             info = {
                 "status": "success"
             }
