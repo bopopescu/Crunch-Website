@@ -8,13 +8,16 @@
 
     print(myDb)
     *Just confirms that the database connection is successful.
-        Itll look something like this: <mysql.connector.connection.MySQLConnection object at 0x042691D0>
+        It'll look something like this: <mysql.connector.connection.MySQLConnection object at 0x042691D0>
 
 
     sqlString = "INSERT INTO users (email, userName, passwordHash, fullName) VALUES (%s, %s, %s, %s)"
     *This is your sql query string.  There are a bunch of commands, but its pretty straight forward what it all is.
 
     Another example would be: sqlString_Email = "SELECT email FROM users WHERE email = " + "'" + email + "'"
+
+    *If there's something else you want to do, try looking it up first, there may be built in method in MySQL that makes
+        it a lot easier.
 
     values = (email, userName, passwordHash, fullName)
     *This is the variable that i mentioned in the other example database.py file.  This is if you are trying to select or
@@ -35,5 +38,4 @@
  example.
 
  So, if you need to create a function that queries the database, either add it to one of the existing files if you think
- it fits there, or just create another blueprint.
-
+ it fits there, or just create another file in api.
