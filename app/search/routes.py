@@ -35,3 +35,7 @@ def search_results_page():
     data = request.values.get('data')
     loaded_data = json.loads(data)
     return render_template("search_results.html", data=loaded_data)
+
+@search_bp.route('/movie_details_page', methods=["GET", "POST"])
+def movie_details_page():
+    return

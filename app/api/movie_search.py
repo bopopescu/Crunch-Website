@@ -26,3 +26,18 @@ def search_movie(search_criteria):
     return json.dumps(info)
 
 
+@api.route('/get_movieID', methods=["GET"])
+def get_movieID(movie_title):
+    data = json.loads(movie_title)
+    search = data["movieTitle"]
+
+    myDb = Database.dbConnection()
+    print(myDb)
+    sqlString = "SELECT tconst FROM titles WHERE primaryTitle = " "'" + search + "'" + "AND titleType = 'movie'"
+    result = Database.selectStatement(myDb, sqlString)
+    fetch = result.fetchone()[0]
+    info = {
+        "titleID": fetch
+    }
+
+    return json.dumps(info)

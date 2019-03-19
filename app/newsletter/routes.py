@@ -8,7 +8,7 @@ def email():
     return render_template('email.html')
 
 
-@newsletter_bp.route('/result', methods = ['POST', 'GET']) #will take the data and input it into the program
+@newsletter_bp.route('/result', methods=['POST', 'GET']) #will take the data and input it into the program
 def result():
     if request.method == 'POST':
         result = request.form
