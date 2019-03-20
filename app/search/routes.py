@@ -2,7 +2,7 @@ from app.search import search_bp
 import json
 from flask import render_template, redirect, url_for
 from flask import request
-from app.api import movie_search
+from app.api import movie_search, web_scraper
 
 
 @search_bp.route('/search_page', methods=["GET", "POST"])
@@ -38,4 +38,37 @@ def search_results_page():
 
 @search_bp.route('/movie_details_page', methods=["GET", "POST"])
 def movie_details_page():
-    return
+    movie_data = request.values.get('data')
+    loaded_movie_data = json.loads(movie_data)
+
+    info = {
+        "titleID": loaded_movie_data["movieID"]
+    }
+
+    scraped_data = web_scraper.get_movie_info(json.dumps(info))
+    loaded_scraped_data = json.loads(scraped_data)
+
+    crew_data = movie_search.get_cast(info)
+    loaded_crew_data = json.loads(crew_data)
+
+    movie_title = loaded_movie_data["title"]
+    is_adult = loaded_movie_data["isAdult"]
+    start_year = loaded_movie_data["start_year"]
+    runtime = loaded_movie_data["runtime"]
+    genres = loaded_movie_data["genres"]
+
+    poster_link = loaded_scraped_data["posterLink"]
+    plot_text = loaded_scraped_data["plotText"]
+
+    name = loaded_crew_data["name"]
+    category = loaded_crew_data["category"]
+    job = loaded_crew_data["job"]
+    characters = loaded_crew_data["characters"]
+
+
+    return render_template('movie_details.html', movie_title=movie_title, is_adult=is_adult, start_year=start_year,
+                           runtime=runtime, genres=genres, poster_link=poster_link, plot_text=plot_text, name=name,
+                           category=category, job=job, characters=characters)
+
+
+

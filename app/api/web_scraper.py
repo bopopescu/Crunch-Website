@@ -3,15 +3,14 @@ from bs4 import BeautifulSoup
 import json
 from app.api import api, movie_search
 
-@api.route('/get_movie_info/<string:movie_title>' , methods=["GET"])
-def get_movie_info(movie_title):
-    info = {
-        "movieTitle": movie_title
-    }
-    data = json.loads(movie_search.get_movieID(json.dumps(info)))
-    titleID = data["titleID"]
+@api.route('/get_movie_info' , methods=["GET"])
+def get_movie_info(titleID):
 
-    target_url = 'https://www.imdb.com/title/' + titleID
+    data = json.loads(titleID)
+
+    title_ID = data["titleID"]
+
+    target_url = 'https://www.imdb.com/title/' + title_ID
 
     page = requests.get(target_url).text
 
