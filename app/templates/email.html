@@ -1,0 +1,19 @@
+{% block content %}
+<html>
+    <body>
+
+    <h2>Text Input</h2>
+
+    <form name="E-Mail" action="/newsletter/result" method="POST">
+        Subject:<br>
+            <input type="text" name="subject" value={{request.form.subject}}>
+        <br>
+        Message:<br>
+            <textarea name="email" cols="100" rows="20" value={{request.form.email}}></textarea>
+        <br><br>
+        <button type = 'submit'> Submit</button>
+    </form>
+
+    </body>
+</html>
+{% endblock %}

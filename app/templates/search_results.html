@@ -1,0 +1,17 @@
+{% block content %}
+<html>
+    <h1>Welcome! Search for movies here!</h1>
+    <body>
+        <form action = '/search/search_page' method="POST">
+            Search: <input type="text" name="search_criteria"> <input type="submit" value="Search">
+        </form>
+        <ul style="list-style-type: none">
+            {% for i in data %}
+                <li>
+                    {{ data[i]["title"] }}, {{ data[i]["startYear"] }} ({{ data[i]["genres"] }})
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+{% endblock %}
