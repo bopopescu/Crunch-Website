@@ -8,7 +8,7 @@ import smtplib, ssl, email
 import os
 from app.newsletter import newsletter_bp
 
-UPLOAD_FOLDER = '/Users/blei941/Documents/GitProjects/Testing' #change to fit where the code is located
+UPLOAD_FOLDER = '/' #change to fit where the code is located
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif','.doc','.docx','.java','.py'])#add more if needed
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
