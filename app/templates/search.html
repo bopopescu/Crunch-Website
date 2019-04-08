@@ -1,0 +1,13 @@
+{% block content %}
+<html>
+    <body style="background-image: url(https://i.imgur.com/5NVs6xg.png); background-repeat: repeat">
+        <img src="https://i38.photobucket.com/albums/e122/novafire7/logo_zpsfthkschn.png" style="width:300px;height:70px;">
+        <form action = '/search/search_page' method="POST" style="float: right; font-family: Courier; color: white">
+            Search: <input type="text" name="search_criteria" style="border: 2px solid gray; border-radius: 4px; width: 60%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box">  <input type="image" src="http://i38.photobucket.com/albums/e122/novafire7/search%20button_zpslkkma1et.png" name="search" style="vertical-align: middle">
+        </form>
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+    </body>
+</html>
+{% endblock %}

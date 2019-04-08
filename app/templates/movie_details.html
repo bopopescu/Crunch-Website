@@ -1,0 +1,23 @@
+{% block content %}
+<html>
+    <h1>{{ movie_title }}</h1>
+    <body>
+        <img src={{ poster_link }}>
+        <p>{{ start_year }}</p>
+        <p>{{ runtime }}</p>
+        <p>{{ genres }}</p>
+        <p>{{ plot_text }}</p>
+        <p>{{ is_adult }}</p>
+        <ul style="list-style-type: none;">
+            {% for i in cast %}
+                <li>
+                    {{ cast[i]["name"] }}, {{ cast[i]["category"] }}, {{ cast[i]["job"] }}, {{ cast[i]["characters"] }}
+                </li>
+                <l1>
+                -
+                </l1>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+{% endblock %}
