@@ -21,3 +21,6 @@ app.register_blueprint(signup_bp)
 
 from app.newsletter import newsletter_bp as newsletter_bp
 app.register_blueprint(newsletter_bp)
+
+from app.support import support_bp as support_bp
+app.register_blueprint(support_bp)
