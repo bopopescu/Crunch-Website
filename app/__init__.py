@@ -24,3 +24,6 @@ app.register_blueprint(newsletter_bp)
 
 from app.support import support_bp as support_bp
 app.register_blueprint(support_bp)
+
+from app.recommend import recommend_bp as recommend_bp
+app.register_blueprint(recommend_bp)

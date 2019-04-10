@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for
-from werkzeug.utils import secure_filename
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
