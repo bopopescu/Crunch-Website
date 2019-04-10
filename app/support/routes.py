@@ -21,8 +21,12 @@ def support_confirm(): #would take previous form create a ticket
         time = datetime.datetime.now().strftime("%Y%m%d%I%M%S")#create ticket number
         subject = "Support ticket #%s" %(time)
         email = result['message']
+        user = result['user']
         message = MIMEMultipart()
-        text = """%s""" %(email)
+        text = """/
+        User: %s
+        
+        %s""" %(user, email)
         message.attach(MIMEText(text,'plain'))
         message["Subject"] = subject
         message["From"] = sender_email
@@ -36,7 +40,7 @@ def support_confirm(): #would take previous form create a ticket
 
         with open('support.txt', mode='a') as support:#add new support ticket to csv
             support_writer = csv.writer(support, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            support_writer.writerow([time, 'Unresolved'])
+            support_writer.writerow([time, user,'Unresolved'])
         with open('support.txt', 'r') as f: #create list with csv and sort
             reader = csv.reader(f)
             your_list = list(reader)
@@ -65,7 +69,7 @@ def support_remove():#takes ticket number and set it to resolved
         for x in your_list:
             if ticket == x[0]:
                 x[0] = ticket
-                x[1] = 'Resolved'
+                x[2] = 'Resolved'
             else:
                 pass
         with open('support.txt', mode='w') as support:#write csv with updated list

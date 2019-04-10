@@ -20,15 +20,17 @@ def recommend_confirm(): #take form and send email to people
         user = result['user']
         subject = "Movie Recommendation: %s" %(m_name)
         email = result['msg']
+        year = result['year']
 
         sender_email = "crunchmovietest@gmail.com"
         message = MIMEMultipart()
         text = """\
         User: %s
         Movie name: %s
+        Year of release: %s
         
         Why should it be added:
-        %s""" %(user, m_name, email)#add other things if needed, such as country of origin or what studio make the movie/when
+        %s""" %(user, m_name, year, email)#add other things if needed, such as country of origin or what studio make the movie/when
         message.attach(MIMEText(text,'plain'))
         message["Subject"] = subject
         message["From"] = sender_email
