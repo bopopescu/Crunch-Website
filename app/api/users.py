@@ -116,11 +116,12 @@ def change_password(info):
     data = json.loads(info)
     current_hash = data["current_hash"]
     change_hash = data["change_hash"]
-    userid = data["userid"]
+    userid = str(data["userid"])
     myDb = Database.dbConnection()
     print(myDb)
-    sqlString = "UPDATE users SET password = " + "'" + change_hash + "'" + "WHERE userid = " + "'" + userid + "'" + "AND password = " + "'" + current_hash + "'"
+    sqlString = "UPDATE users SET passwordHash = " + "'" + change_hash + "'" + "WHERE userid = " + "'" + userid + "'" + "AND passwordHash = " + "'" + current_hash + "'"
     result = Database.selectStatement(myDb, sqlString)
+    myDb.commit()
 
 
 

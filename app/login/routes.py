@@ -35,13 +35,13 @@ def login_page():
         else:
             error = None
             session['userid'] = user
-            return redirect(url_for('profile.profile_page'))
+            return redirect(url_for('index'))
 
     return render_template("login.html", error=error)
 
 @login_bp.route('/logout', methods=['GET','POST'])
 def logout():
     session.pop('userid', None)
-    return redirect(url_for('login.login_page'))
+    return redirect(url_for('index'))
 
 

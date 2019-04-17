@@ -30,17 +30,17 @@ def profile_page():
                 change_pass = request.form.get("password_change", False)
                 if current_pass != False and change_pass != False:
                     info = {
-                        "hash": current_pass
+                        "password": current_pass
                     }
-                    current_hash = hashing.hash_password(json.dumps(info))
+                    current_hash = json.loads(hashing.hash_password(json.dumps(info)))
                     info = {
-                        "hash": change_pass
+                        "password": change_pass
                     }
-                    change_hash = hashing.hash_password(json.dumps(info))
+                    change_hash = json.loads(hashing.hash_password(json.dumps(info)))
                     password_change = {
                         "userid": userid,
-                        "current_hash": current_hash,
-                        "change_hash": change_hash
+                        "current_hash": current_hash["passwordhash"],
+                        "change_hash": change_hash["passwordhash"]
                     }
                     users.change_password(json.dumps(password_change))
             elif request.form['submit'] == 'Unsubscribe':

@@ -71,7 +71,7 @@ def movie_details_page():
         }
 
 
-    return render_template('movie_details.html', movie_title=movie_title, is_adult=is_adult, start_year=start_year,
+    return render_template('movie_details.html', movie_title=movie_title, start_year=start_year,
                            runtime=runtime, genres=genres, poster_link=poster_link, plot_text=plot_text, cast=cast)
 
 
