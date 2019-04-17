@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd97e811-b05f-4597-aaeb-3838c14e8659" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/login/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/login/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/profile/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/profile/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/search/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/search/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/profilestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/profilestyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/searchstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/searchstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/movie_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/movie_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/profile_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/profile_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/search_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/search_results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/recommend/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/recommend/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/detailstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/static/css/homestyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/recommend.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/recommend_check.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/support.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/support_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/support_ticket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/ticket_resolved.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/newsletter/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+            <state relative-caret-position="178">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -133,10 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/static/css/homestyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4462">
+            <state relative-caret-position="23">
               <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
             </state>
           </provider>
@@ -268,6 +265,18 @@
               <item name="Movie Site 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Movie Site 2" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Movie Site 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Movie Site 2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Movie Site 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Movie Site 2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,6 +285,13 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Movie Site 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Movie Site 2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Movie Site 2" type="b2602c69:ProjectViewProjectNode" />
@@ -374,7 +390,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1369936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -769,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/homestyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4462">
-          <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/css/detailstyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2691">
@@ -799,8 +807,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/newsletter/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+        <state relative-caret-position="178">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/homestyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="194" column="17" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
         </state>
       </provider>
     </entry>
